@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Dados e modelos grandes
+data/raw/*.zip
+data/raw/*.csv
+data/processed/*.csv
+models/*
+!models/.gitkeep

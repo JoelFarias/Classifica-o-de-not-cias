@@ -1,0 +1,51 @@
+{
+  "dataset": "AG News Classification Dataset",
+  "random_state": 42,
+  "validation_size": 0.1,
+  "class_mapping": {
+    "1": "World",
+    "2": "Sports",
+    "3": "Business",
+    "4": "Sci/Tech"
+  },
+  "label_mapping": {
+    "0": "World",
+    "1": "Sports",
+    "2": "Business",
+    "3": "Sci/Tech"
+  },
+  "files": {
+    "train": "data\\processed\\train_processed.csv",
+    "validation": "data\\processed\\validation_processed.csv",
+    "test": "data\\processed\\test_processed.csv"
+  },
+  "rows": {
+    "train": 108000,
+    "validation": 12000,
+    "test": 7600
+  },
+  "class_distribution": {
+    "train": {
+      "Business": 27000,
+      "Sci/Tech": 27000,
+      "Sports": 27000,
+      "World": 27000
+    },
+    "validation": {
+      "Business": 3000,
+      "Sci/Tech": 3000,
+      "Sports": 3000,
+      "World": 3000
+    },
+    "test": {
+      "Business": 1900,
+      "Sci/Tech": 1900,
+      "Sports": 1900,
+      "World": 1900
+    }
+  },
+  "text_columns": {
+    "text": "Title + Description sem limpeza adicional",
+    "clean_text": "Texto em minusculas, com barras invertidas removidas, espacos normalizados e caracteres estranhos tratados"
+  }
+}

@@ -1,20 +1,74 @@
-Descrição do dataset AG News
-O AG News Classification Dataset é uma base de dados de NLP para classificação de notícias por tema. Ele foi construído a partir do corpus AG News, selecionando as quatro maiores categorias de notícias do conjunto original. Cada notícia pertence a uma de quatro classes: World, Sports, Business ou Sci/Tech. 
-Blog do Hvitfeldt · 1
-A base possui 120.000 amostras de treino e 7.600 amostras de teste. Ela é balanceada: cada classe tem 30.000 notícias para treino e 1.900 notícias para teste. 
-Kaggle · 1
-Os arquivos principais são train.csv e test.csv. Cada linha contém três informações: índice da classe, título da notícia e descrição/resumo da notícia. As classes são codificadas assim: 1 = World, 2 = Sports, 3 = Business, 4 = Sci/Tech. 
-Hugging Face
-Tema do trabalho
-Classificação automática de notícias por tema usando Deep Learning
-O objetivo é treinar um modelo que leia o título e a descrição de uma notícia e preveja se ela pertence a uma destas categorias:
-Classe
-Significado
-World
-Notícias internacionais, política global, conflitos, eventos mundiais
-Sports
-Esportes, jogos, campeonatos, atletas
-Business
-Economia, empresas, mercado financeiro, negócios
-Sci/Tech
-Ciência, tecnologia, inovação, computação
+# Classificação de Notícias por Tema
+
+Projeto de NLP para classificação automática de notícias usando o dataset **AG News Classification Dataset**.
+
+## Dataset
+
+Dataset: [AG News Classification Dataset](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset)
+
+O dataset possui notícias classificadas em quatro categorias:
+
+| Código | Classe |
+| --- | --- |
+| 1 | World |
+| 2 | Sports |
+| 3 | Business |
+| 4 | Sci/Tech |
+
+Arquivos originais esperados:
+
+- `data/raw/train.csv`
+- `data/raw/test.csv`
+
+Os arquivos CSV do dataset não são versionados no Git, pois são arquivos grandes. Eles devem ser baixados do Kaggle e colocados em `data/raw/`.
+
+## Estrutura
+
+```text
+data/
+  raw/
+  processed/
+models/
+notebooks/
+reports/
+  figures/
+src/
+  data/
+```
+
+## Scripts da Pessoa 1
+
+```bash
+python src/data/load_ag_news.py
+python src/data/inspect_ag_news.py
+python src/data/explore_ag_news.py
+python src/data/preprocess_ag_news.py
+```
+
+## Sprints Concluídas
+
+| Sprint | Entrega |
+| --- | --- |
+| Sprint 1 | Estrutura do projeto e carregamento do dataset |
+| Sprint 2 | Conferência de colunas, nulos, duplicados e classes |
+| Sprint 3 | Análise exploratória, gráficos e exemplos |
+| Sprint 4 | Pré-processamento e divisão treino/validação/teste |
+
+## Dados Processados
+
+O script de pré-processamento gera:
+
+- `data/processed/train_processed.csv`
+- `data/processed/validation_processed.csv`
+- `data/processed/test_processed.csv`
+- `data/processed/metadata.json`
+
+Os CSVs processados também não são versionados, mas podem ser recriados com:
+
+```bash
+python src/data/preprocess_ag_news.py
+```
+
+## Próxima Etapa
+
+A próxima parte do projeto é criar o baseline da Pessoa 2 usando TF-IDF com Logistic Regression, Naive Bayes ou Linear SVM.

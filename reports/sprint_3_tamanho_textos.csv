@@ -1,0 +1,5 @@
+class_name,count,mean,median,min,max
+World,30000,38.88,39.0,9,145
+Sports,30000,37.77,37.0,4,151
+Business,30000,37.54,37.0,8,134
+Sci/Tech,30000,37.19,36.0,8,177

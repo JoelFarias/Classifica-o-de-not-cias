@@ -1,0 +1,5 @@
+class_name,train,test
+World,30000,1900
+Sports,30000,1900
+Business,30000,1900
+Sci/Tech,30000,1900
