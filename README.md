@@ -2,6 +2,8 @@
 
 Projeto de NLP para classificação automática de notícias usando o dataset **AG News Classification Dataset**.
 
+**Equipe:** Bruno Pereira, Joel Carolino e Gabriel César
+
 ## Dataset
 
 Dataset: [AG News Classification Dataset](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset)
@@ -34,41 +36,102 @@ reports/
   figures/
 src/
   data/
+  models/
 ```
 
-## Scripts da Pessoa 1
+## Como rodar o projeto
+
+### 1. Instalar dependências
 
 ```bash
-python src/data/load_ag_news.py
-python src/data/inspect_ag_news.py
-python src/data/explore_ag_news.py
+pip install -r requirements.txt
+```
+
+### 2. Baixar o dataset
+
+Baixe os arquivos `train.csv` e `test.csv` do [Kaggle](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset) e coloque em `data/raw/`.
+
+### 3. Pré-processar os dados (Pessoa 1)
+
+```bash
 python src/data/preprocess_ag_news.py
 ```
+
+Isso gera os arquivos processados em `data/processed/`.
+
+### 4. Treinar o baseline (Pessoa 2)
+
+```bash
+python src/models/baseline_tfidf.py
+```
+
+Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos dados de teste e salva os modelos em `models/` e os resultados em `reports/baseline_results.csv`.
+
+## Scripts disponíveis
+
+### Pessoa 1 — Dados e Pré-processamento
+
+| Script | O que faz |
+| --- | --- |
+| `src/data/load_ag_news.py` | Carrega e valida os arquivos originais |
+| `src/data/inspect_ag_news.py` | Inspeciona colunas, nulos e duplicados |
+| `src/data/explore_ag_news.py` | Análise exploratória e geração de gráficos |
+| `src/data/preprocess_ag_news.py` | Limpeza, divisão e salvamento dos dados processados |
+
+### Pessoa 2 — Baseline
+
+| Script | O que faz |
+| --- | --- |
+| `src/models/baseline_tfidf.py` | Treina TF-IDF + Logistic Regression e LinearSVC, avalia e salva resultados |
 
 ## Sprints Concluídas
 
-| Sprint | Entrega |
-| --- | --- |
-| Sprint 1 | Estrutura do projeto e carregamento do dataset |
-| Sprint 2 | Conferência de colunas, nulos, duplicados e classes |
-| Sprint 3 | Análise exploratória, gráficos e exemplos |
-| Sprint 4 | Pré-processamento e divisão treino/validação/teste |
+### Pessoa 1
+
+| Sprint | Entrega | Report |
+| --- | --- | --- |
+| Sprint 1 | Estrutura do projeto e carregamento do dataset | `reports/sprint_1_estrutura_dataset.md` |
+| Sprint 2 | Conferência de colunas, nulos, duplicados e classes | `reports/sprint_2_conferencia_dados.md` |
+| Sprint 3 | Análise exploratória, gráficos e exemplos | `reports/sprint_3_analise_exploratoria.md` |
+| Sprint 4 | Pré-processamento e divisão treino/validação/teste | `reports/sprint_4_preprocessamento_dados.md` |
+
+### Pessoa 2
+
+| Sprint | Entrega | Report |
+| --- | --- | --- |
+| Sprint 1 | Recebimento e verificação dos dados processados | `reports/sprint_p2_1_recebimento_dados.md` |
+| Sprint 2 | Criação e treinamento do baseline com TF-IDF | `reports/sprint_p2_2_treinamento_baseline.md` |
+| Sprint 3 | Métricas, avaliação e matrizes de confusão | `reports/sprint_p2_3_metricas_avaliacao.md` |
+| Sprint 4 | Análise de erros e resultados finais | `reports/sprint_p2_4_analise_erros.md` |
+
+## Resultados do Baseline
+
+O melhor modelo baseline foi o **LinearSVC** com acurácia de **91,4%** no conjunto de teste.
+
+| Classe | F1-score |
+| --- | ---: |
+| World | 0,91 |
+| Sports | 0,97 |
+| Business | 0,88 |
+| Sci/Tech | 0,89 |
+| **Média** | **0,91** |
+
+Os resultados completos estão em `reports/baseline_results.csv`.
 
 ## Dados Processados
 
-O script de pré-processamento gera:
-
-- `data/processed/train_processed.csv`
-- `data/processed/validation_processed.csv`
-- `data/processed/test_processed.csv`
-- `data/processed/metadata.json`
-
-Os CSVs processados também não são versionados, mas podem ser recriados com:
+Os CSVs processados não são versionados, mas podem ser recriados com:
 
 ```bash
 python src/data/preprocess_ag_news.py
 ```
 
+| Arquivo | Linhas |
+| --- | ---: |
+| `data/processed/train_processed.csv` | 108.000 |
+| `data/processed/validation_processed.csv` | 12.000 |
+| `data/processed/test_processed.csv` | 7.600 |
+
 ## Próxima Etapa
 
-A próxima parte do projeto é criar o baseline da Pessoa 2 usando TF-IDF com Logistic Regression, Naive Bayes ou Linear SVM.
+A próxima parte do projeto é criar o modelo de Deep Learning da Pessoa 3 (LSTM, GRU, BERT ou DistilBERT) e comparar os resultados com o baseline.
