@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Preparar os textos do dataset AG News para serem usados pelos modelos da Pessoa 2 e da Pessoa 3.
+Preparar os textos do dataset AG News para serem usados pelos modelos do Gabriel César (Pessoa 2) e do Bruno Pereira (Pessoa 3).
 
 ## Script usado
 
@@ -89,7 +89,7 @@ A separação foi estratificada, ou seja, manteve a mesma proporção das classe
 
 ## Como usar os dados nas próximas partes
 
-Para a Pessoa 2, responsável pelo baseline:
+Para o Gabriel César (Pessoa 2), responsável pelo baseline:
 
 - usar `clean_text` como entrada do TF-IDF;
 - usar `label` como saída do modelo;
@@ -97,7 +97,7 @@ Para a Pessoa 2, responsável pelo baseline:
 - validar com `validation_processed.csv`;
 - testar no final com `test_processed.csv`.
 
-Para a Pessoa 3, responsável pelo Deep Learning:
+Para o Bruno Pereira (Pessoa 3), responsável pelo Deep Learning:
 
 - usar `clean_text` como entrada principal;
 - usar `label` como classe;
@@ -106,4 +106,4 @@ Para a Pessoa 3, responsável pelo Deep Learning:
 
 ## Conclusão da sprint
 
-Os dados estão prontos para modelagem. A Pessoa 2 já pode criar o baseline e a Pessoa 3 já pode usar o mesmo formato para treinar o modelo de Deep Learning.
+Os dados estão prontos para modelagem. O Gabriel César (Pessoa 2) já pode criar o baseline e o Bruno Pereira (Pessoa 3) já pode usar o mesmo formato para treinar o modelo de Deep Learning.

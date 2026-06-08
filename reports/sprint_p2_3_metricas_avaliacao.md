@@ -1,4 +1,4 @@
-# Sprint 3 (Pessoa 2): Métricas e Avaliação do Baseline
+# Sprint 3 (Pessoa 2 - Gabriel): Métricas e Avaliação do Baseline
 
 ## Objetivo
 
@@ -79,4 +79,4 @@ Os resultados foram salvos em:
 
 ## Conclusão da sprint
 
-O LinearSVC foi ligeiramente superior ao Logistic Regression. Ambos os modelos baseline alcançaram acurácia acima de 90%, o que é uma referência sólida para comparação com o modelo de Deep Learning da Pessoa 3. A maior dificuldade observada foi a separação entre as classes Business e Sci/Tech.
+O LinearSVC foi ligeiramente superior ao Logistic Regression. Ambos os modelos baseline alcançaram acurácia acima de 90%, o que é uma referência sólida para comparação com o modelo de Deep Learning do Bruno Pereira (Pessoa 3). A maior dificuldade observada foi a separação entre as classes Business e Sci/Tech.

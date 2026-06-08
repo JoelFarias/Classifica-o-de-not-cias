@@ -1,8 +1,8 @@
-# Sprint 1 (Pessoa 2): Recebimento e Verificação dos Dados
+# Sprint 1 (Pessoa 2 - Gabriel): Recebimento e Verificação dos Dados
 
 ## Objetivo
 
-Receber os dados preparados pela Pessoa 1 e confirmar que estão no formato correto para o treinamento do modelo baseline.
+Receber os dados preparados pelo Joel Carolino (Pessoa 1) e confirmar que estão no formato correto para o treinamento do modelo baseline.
 
 ## Arquivos recebidos
 

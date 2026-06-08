@@ -1,4 +1,4 @@
-# Sprint 2 (Pessoa 2): Criação e Treinamento do Baseline
+# Sprint 2 (Pessoa 2 - Gabriel): Criação e Treinamento do Baseline
 
 ## Objetivo
 

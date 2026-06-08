@@ -1,8 +1,8 @@
-# Sprint 4 (Pessoa 2): Análise de Erros e Resultados Finais
+# Sprint 4 (Pessoa 2 - Gabriel): Análise de Erros e Resultados Finais
 
 ## Objetivo
 
-Identificar padrões nos erros do modelo baseline, explicar por que esses erros ocorrem e registrar os resultados para comparação com o modelo de Deep Learning da Pessoa 3.
+Identificar padrões nos erros do modelo baseline, explicar por que esses erros ocorrem e registrar os resultados para comparação com o modelo de Deep Learning do Bruno Pereira (Pessoa 3).
 
 ## Exemplos de erros do LinearSVC
 
@@ -67,7 +67,7 @@ Os exemplos abaixo foram classificados incorretamente pelo modelo.
 
 ## Resultados salvos para comparação
 
-Os resultados foram salvos para a Pessoa 3 usar como referência:
+Os resultados foram salvos para o Bruno Pereira (Pessoa 3) usar como referência:
 
 | Arquivo | Conteúdo |
 | --- | --- |
@@ -76,7 +76,7 @@ Os resultados foram salvos para a Pessoa 3 usar como referência:
 | `models/baseline_logreg.pkl` | Modelo Logistic Regression |
 | `models/baseline_svm.pkl` | Modelo LinearSVC (melhor baseline) |
 
-## Referência para a Pessoa 3
+## Referência para o Bruno Pereira (Pessoa 3)
 
 O modelo de Deep Learning deverá ser comparado com o LinearSVC, que foi o melhor baseline:
 

@@ -4,6 +4,14 @@ Projeto de NLP para classificação automática de notícias usando o dataset **
 
 **Equipe:** Bruno Pereira, Joel Carolino e Gabriel César
 
+## Responsáveis
+
+| Pessoa | Integrante | Parte do projeto |
+| --- | --- | --- |
+| Pessoa 1 | Joel Carolino | Dados, análise exploratória e pré-processamento |
+| Pessoa 2 | Gabriel César | Baseline, métricas e análise de erros |
+| Pessoa 3 | Bruno Pereira | Deep Learning, comparação final e demonstração |
+
 ## Dataset
 
 Dataset: [AG News Classification Dataset](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset)
@@ -51,7 +59,7 @@ pip install -r requirements.txt
 
 Baixe os arquivos `train.csv` e `test.csv` do [Kaggle](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset) e coloque em `data/raw/`.
 
-### 3. Pré-processar os dados (Pessoa 1)
+### 3. Pré-processar os dados (Pessoa 1 - Joel)
 
 ```bash
 python src/data/preprocess_ag_news.py
@@ -59,7 +67,7 @@ python src/data/preprocess_ag_news.py
 
 Isso gera os arquivos processados em `data/processed/`.
 
-### 4. Treinar o baseline (Pessoa 2)
+### 4. Treinar o baseline (Pessoa 2 - Gabriel)
 
 ```bash
 python src/models/baseline_tfidf.py
@@ -69,7 +77,7 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 
 ## Scripts disponíveis
 
-### Pessoa 1 — Dados e Pré-processamento
+### Pessoa 1 — Joel — Dados e Pré-processamento
 
 | Script | O que faz |
 | --- | --- |
@@ -78,7 +86,7 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 | `src/data/explore_ag_news.py` | Análise exploratória e geração de gráficos |
 | `src/data/preprocess_ag_news.py` | Limpeza, divisão e salvamento dos dados processados |
 
-### Pessoa 2 — Baseline
+### Pessoa 2 — Gabriel — Baseline
 
 | Script | O que faz |
 | --- | --- |
@@ -86,7 +94,7 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 
 ## Sprints Concluídas
 
-### Pessoa 1
+### Pessoa 1 — Joel
 
 | Sprint | Entrega | Report |
 | --- | --- | --- |
@@ -95,7 +103,7 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 | Sprint 3 | Análise exploratória, gráficos e exemplos | `reports/sprint_3_analise_exploratoria.md` |
 | Sprint 4 | Pré-processamento e divisão treino/validação/teste | `reports/sprint_4_preprocessamento_dados.md` |
 
-### Pessoa 2
+### Pessoa 2 — Gabriel
 
 | Sprint | Entrega | Report |
 | --- | --- | --- |
@@ -134,4 +142,4 @@ python src/data/preprocess_ag_news.py
 
 ## Próxima Etapa
 
-A próxima parte do projeto é criar o modelo de Deep Learning da Pessoa 3 (LSTM, GRU, BERT ou DistilBERT) e comparar os resultados com o baseline.
+A próxima parte do projeto é criar o modelo de Deep Learning da Pessoa 3, Bruno Pereira, usando LSTM, GRU, BERT ou DistilBERT, e comparar os resultados com o baseline.

@@ -51,7 +51,13 @@ O objetivo é treinar um modelo que leia o título e a descrição de uma notíc
 
 Para a divisão ficar justa, cada integrante deve ficar responsável por uma parte técnica do projeto e também por explicar seus próprios resultados no relatório/apresentação.
 
-### Pessoa 1: Dados, Análise Exploratória e Preparação
+| Pessoa | Integrante | Responsabilidade |
+| --- | --- | --- |
+| Pessoa 1 | Joel Carolino | Dados, análise exploratória e pré-processamento |
+| Pessoa 2 | Gabriel César | Baseline, métricas e análise de erros |
+| Pessoa 3 | Bruno Pereira | Deep Learning, comparação final e demonstração |
+
+### Pessoa 1: Joel Carolino - Dados, Análise Exploratória e Preparação
 
 Responsável por deixar os dados prontos para os modelos e explicar como a base funciona.
 
@@ -147,7 +153,7 @@ Entregas da sprint:
 
 Status: concluída.
 
-Objetivo: preparar os textos para serem usados pelos modelos da Pessoa 2 e da Pessoa 3.
+Objetivo: preparar os textos para serem usados pelos modelos do Gabriel César (Pessoa 2) e do Bruno Pereira (Pessoa 3).
 
 Atividades:
 
@@ -160,7 +166,7 @@ Atividades:
 - Separar quais dados serão usados para treino, validação e teste.
 - Salvar os dados preparados ou deixar o código pronto para gerar os dados preparados.
 - Documentar quais transformações foram feitas nos textos.
-- Entregar para a Pessoa 2 e Pessoa 3 o formato final dos dados.
+- Entregar para o Gabriel César (Pessoa 2) e para o Bruno Pereira (Pessoa 3) o formato final dos dados.
 
 Entregas da sprint:
 
@@ -178,7 +184,7 @@ Entregáveis:
 - Explicação do dataset para o relatório.
 - Parte da apresentação sobre dataset e pré-processamento.
 
-### Pessoa 2: Baseline, Métricas e Comparação Inicial
+### Pessoa 2: Gabriel César - Baseline, Métricas e Comparação Inicial
 
 Responsável por criar o primeiro modelo funcional do projeto e definir uma base de comparação para o Deep Learning.
 
@@ -188,11 +194,11 @@ Organização em sprints:
 
 Status: concluída.
 
-Objetivo: receber os dados preparados pela Pessoa 1 e confirmar que estão no formato correto para o treinamento do modelo baseline.
+Objetivo: receber os dados preparados pelo Joel Carolino (Pessoa 1) e confirmar que estão no formato correto para o treinamento do modelo baseline.
 
 Atividades:
 
-- Receber os arquivos processados da Pessoa 1:
+- Receber os arquivos processados do Joel Carolino (Pessoa 1):
   - `data/processed/train_processed.csv`
   - `data/processed/validation_processed.csv`
   - `data/processed/test_processed.csv`
@@ -269,13 +275,13 @@ Atividades:
 - Classificar os padrões de confusão mais comuns.
 - Explicar por que esses erros ocorrem.
 - Documentar as limitações do TF-IDF.
-- Registrar as métricas de referência para a Pessoa 3.
+- Registrar as métricas de referência para o Bruno Pereira (Pessoa 3).
 
 Entregas da sprint:
 
 - Análise dos erros com exemplos reais.
 - Explicação dos padrões de confusão.
-- Métricas de referência documentadas para a Pessoa 3.
+- Métricas de referência documentadas para o Bruno Pereira (Pessoa 3).
 
 Entregáveis:
 
@@ -286,14 +292,14 @@ Entregáveis:
 - Explicação do funcionamento do baseline para o relatório.
 - Parte da apresentação sobre baseline e primeiros resultados.
 
-### Pessoa 3: Modelo de Deep Learning, Demo e Resultado Final
+### Pessoa 3: Bruno Pereira - Modelo de Deep Learning, Demo e Resultado Final
 
 Responsável por criar o modelo principal com Deep Learning e comparar o resultado final com o baseline.
 
 Atividades:
 
-- Receber os dados preparados pela Pessoa 1.
-- Usar as métricas da Pessoa 2 como referência de comparação.
+- Receber os dados preparados pelo Joel Carolino (Pessoa 1).
+- Usar as métricas do Gabriel César (Pessoa 2) como referência de comparação.
 - Escolher o modelo de Deep Learning que será usado:
   - LSTM;
   - GRU;
