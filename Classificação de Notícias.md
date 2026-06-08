@@ -182,38 +182,107 @@ Entregáveis:
 
 Responsável por criar o primeiro modelo funcional do projeto e definir uma base de comparação para o Deep Learning.
 
+Organização em sprints:
+
+#### Sprint 1: Recebimento e Verificação dos Dados
+
+Status: concluída.
+
+Objetivo: receber os dados preparados pela Pessoa 1 e confirmar que estão no formato correto para o treinamento do modelo baseline.
+
 Atividades:
 
-- Receber os textos preparados pela Pessoa 1.
-- Conferir se a entrada do modelo está correta:
-  - texto = título + descrição;
-  - rótulo = classe da notícia.
-- Transformar os textos em representação numérica usando TF-IDF.
-- Criar um modelo baseline simples, escolhendo uma das opções:
-  - Logistic Regression;
-  - Naive Bayes;
-  - Linear SVM, caso o grupo queira testar uma terceira opção.
-- Treinar o modelo baseline usando os dados de treino.
-- Avaliar o modelo usando os dados de validação ou teste.
-- Calcular as principais métricas:
+- Receber os arquivos processados da Pessoa 1:
+  - `data/processed/train_processed.csv`
+  - `data/processed/validation_processed.csv`
+  - `data/processed/test_processed.csv`
+- Verificar se as colunas `clean_text` e `label` estão presentes.
+- Conferir a quantidade de exemplos em cada conjunto.
+- Confirmar que não há valores vazios nas colunas de entrada.
+- Confirmar o mapeamento das classes:
+  - `0 = World`
+  - `1 = Sports`
+  - `2 = Business`
+  - `3 = Sci/Tech`
+
+Entregas da sprint:
+
+- Confirmação do formato e integridade dos dados recebidos.
+- Documentação da verificação inicial.
+
+#### Sprint 2: Criação e Treinamento do Baseline
+
+Status: concluída.
+
+Objetivo: transformar os textos em representação numérica com TF-IDF e treinar modelos baseline.
+
+Atividades:
+
+- Criar o script `src/models/baseline_tfidf.py`.
+- Configurar o `TfidfVectorizer` com os parâmetros adequados.
+- Ajustar o vetorizador apenas nos dados de treino.
+- Treinar dois modelos para comparação:
+  - Logistic Regression.
+  - LinearSVC.
+- Salvar o vetorizador e os modelos treinados em `models/`.
+
+Entregas da sprint:
+
+- Script de treinamento funcionando.
+- Vetorizador TF-IDF salvo.
+- Dois modelos baseline treinados e salvos.
+
+#### Sprint 3: Métricas e Avaliação
+
+Status: concluída.
+
+Objetivo: avaliar o desempenho dos modelos nos conjuntos de validação e teste e calcular as métricas principais.
+
+Atividades:
+
+- Avaliar os modelos nos conjuntos de validação e teste.
+- Calcular as métricas por classe:
   - acurácia;
   - precision;
   - recall;
   - F1-score.
-- Gerar uma matriz de confusão do baseline.
+- Gerar a matriz de confusão dos dois modelos.
 - Identificar quais classes o baseline acerta mais.
 - Identificar quais classes o baseline confunde mais.
-- Separar alguns exemplos de erros do modelo.
-- Explicar por que esses erros podem ter acontecido.
-- Salvar os resultados do baseline para comparação com o modelo de Deep Learning.
-- Salvar o modelo baseline, se necessário.
+- Salvar os resultados em `reports/baseline_results.csv`.
+
+Entregas da sprint:
+
+- Métricas completas dos dois modelos.
+- Matrizes de confusão.
+- Arquivo CSV com resultados para comparação.
+
+#### Sprint 4: Análise de Erros e Resultados Finais
+
+Status: concluída.
+
+Objetivo: identificar padrões nos erros do baseline e documentar os resultados para comparação com o Deep Learning.
+
+Atividades:
+
+- Separar exemplos de erros do modelo.
+- Classificar os padrões de confusão mais comuns.
+- Explicar por que esses erros ocorrem.
+- Documentar as limitações do TF-IDF.
+- Registrar as métricas de referência para a Pessoa 3.
+
+Entregas da sprint:
+
+- Análise dos erros com exemplos reais.
+- Explicação dos padrões de confusão.
+- Métricas de referência documentadas para a Pessoa 3.
 
 Entregáveis:
 
-- Notebook ou script do modelo baseline.
-- Resultado das métricas do baseline.
-- Matriz de confusão do baseline.
-- Pequena análise dos erros.
+- Script `src/models/baseline_tfidf.py`.
+- Resultados das métricas em `reports/baseline_results.csv`.
+- Matrizes de confusão documentadas.
+- Análise dos erros com exemplos.
 - Explicação do funcionamento do baseline para o relatório.
 - Parte da apresentação sobre baseline e primeiros resultados.
 
