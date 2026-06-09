@@ -4,6 +4,7 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
+ProjetoNoticias/
 
 # Dados e modelos grandes
 data/raw/*.zip

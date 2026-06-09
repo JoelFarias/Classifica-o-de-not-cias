@@ -6,3 +6,4 @@ scikit-learn
 tabulate
 torch
 streamlit
+transformers

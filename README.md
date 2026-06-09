@@ -89,6 +89,17 @@ Isso treina um modelo GRU em PyTorch, avalia nos dados de teste, salva métricas
 streamlit run src/app_streamlit.py
 ```
 
+### 7. Alternativa com DistilBERT
+
+Também existe uma versão corrigida da proposta do Bruno usando DistilBERT:
+
+```bash
+python src/models/deep_learning_distilbert.py
+streamlit run src/app_distilbert.py
+```
+
+Essa versão usa `data/processed/train_processed.csv`, `validation_processed.csv` e `test_processed.csv`.
+
 ## Scripts disponíveis
 
 ### Pessoa 1 — Joel — Dados e Pré-processamento
@@ -112,6 +123,8 @@ streamlit run src/app_streamlit.py
 | --- | --- |
 | `src/models/deep_learning_gru.py` | Treina e avalia o modelo GRU |
 | `src/app_streamlit.py` | Abre a demo em Streamlit |
+| `src/models/deep_learning_distilbert.py` | Alternativa com DistilBERT corrigida |
+| `src/app_distilbert.py` | Demo opcional para o DistilBERT |
 
 ## Sprints Concluídas
 
