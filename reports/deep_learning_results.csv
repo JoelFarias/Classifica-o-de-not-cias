@@ -1,0 +1,15 @@
+modelo,classe,precision,recall,f1-score,support
+gru_val,World,0.819,0.863,0.8404,3000.0
+gru_val,Sports,0.9103,0.8933,0.9017,3000.0
+gru_val,Business,0.8263,0.7847,0.8049,3000.0
+gru_val,Sci/Tech,0.8102,0.8227,0.8164,3000.0
+gru_val,macro avg,0.8415,0.8409,0.8409,12000.0
+gru_val,weighted avg,0.8415,0.8409,0.8409,12000.0
+gru_val,accuracy,,,0.8409,
+gru_test,World,0.8251,0.8589,0.8417,1900.0
+gru_test,Sports,0.9091,0.8842,0.8965,1900.0
+gru_test,Business,0.8057,0.7768,0.791,1900.0
+gru_test,Sci/Tech,0.794,0.8116,0.8027,1900.0
+gru_test,macro avg,0.8335,0.8329,0.833,7600.0
+gru_test,weighted avg,0.8335,0.8329,0.833,7600.0
+gru_test,accuracy,,,0.8329,

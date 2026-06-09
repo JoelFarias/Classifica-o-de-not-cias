@@ -75,6 +75,20 @@ python src/models/baseline_tfidf.py
 
 Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos dados de teste e salva os modelos em `models/` e os resultados em `reports/baseline_results.csv`.
 
+### 5. Treinar o modelo de Deep Learning (Pessoa 3 - Bruno)
+
+```bash
+python src/models/deep_learning_gru.py
+```
+
+Isso treina um modelo GRU em PyTorch, avalia nos dados de teste, salva métricas em `reports/` e salva o modelo em `models/deep_learning_gru.pt`.
+
+### 6. Abrir a demonstração
+
+```bash
+streamlit run src/app_streamlit.py
+```
+
 ## Scripts disponíveis
 
 ### Pessoa 1 — Joel — Dados e Pré-processamento
@@ -91,6 +105,13 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 | Script | O que faz |
 | --- | --- |
 | `src/models/baseline_tfidf.py` | Treina TF-IDF + Logistic Regression e LinearSVC, avalia e salva resultados |
+
+### Pessoa 3 — Bruno — Deep Learning e Demo
+
+| Script | O que faz |
+| --- | --- |
+| `src/models/deep_learning_gru.py` | Treina e avalia o modelo GRU |
+| `src/app_streamlit.py` | Abre a demo em Streamlit |
 
 ## Sprints Concluídas
 
@@ -112,6 +133,15 @@ Isso treina o TF-IDF + Logistic Regression e o TF-IDF + LinearSVC, avalia nos da
 | Sprint 3 | Métricas, avaliação e matrizes de confusão | `reports/sprint_p2_3_metricas_avaliacao.md` |
 | Sprint 4 | Análise de erros e resultados finais | `reports/sprint_p2_4_analise_erros.md` |
 
+### Pessoa 3 — Bruno
+
+| Sprint | Entrega | Report |
+| --- | --- | --- |
+| Sprint 1 | Modelo GRU de Deep Learning | `reports/sprint_p3_1_modelo_deep_learning.md` |
+| Sprint 2 | Avaliação e comparação com baseline | `reports/sprint_p3_2_avaliacao_comparacao.md` |
+| Sprint 3 | Demo em Streamlit | `reports/sprint_p3_3_demo_streamlit.md` |
+| Sprint 4 | Resultado final da Pessoa 3 | `reports/sprint_p3_4_resultado_final.md` |
+
 ## Resultados do Baseline
 
 O melhor modelo baseline foi o **LinearSVC** com acurácia de **91,4%** no conjunto de teste.
@@ -125,6 +155,17 @@ O melhor modelo baseline foi o **LinearSVC** com acurácia de **91,4%** no conju
 | **Média** | **0,91** |
 
 Os resultados completos estão em `reports/baseline_results.csv`.
+
+## Resultado do Deep Learning
+
+O modelo de Deep Learning da Pessoa 3 foi uma **GRU bidirecional** em PyTorch.
+
+| Modelo | Acurácia | F1 médio |
+| --- | ---: | ---: |
+| LinearSVC baseline | 91,4% | 0,91 |
+| GRU Deep Learning | 83,29% | 0,8330 |
+
+O GRU não superou o baseline, mas completa a etapa de Deep Learning e permite comparar os dois tipos de abordagem.
 
 ## Dados Processados
 
@@ -142,4 +183,4 @@ python src/data/preprocess_ag_news.py
 
 ## Próxima Etapa
 
-A próxima parte do projeto é criar o modelo de Deep Learning da Pessoa 3, Bruno Pereira, usando LSTM, GRU, BERT ou DistilBERT, e comparar os resultados com o baseline.
+A próxima etapa é consolidar o relatório final e revisar a apresentação do grupo.

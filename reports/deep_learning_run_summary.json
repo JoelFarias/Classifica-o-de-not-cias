@@ -1,0 +1,39 @@
+{
+  "model": "Bidirectional GRU",
+  "device": "cpu",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.2345272236824036,
+      "val_accuracy": 0.6115833333333334
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6995134064674378,
+      "val_accuracy": 0.7979166666666667
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4295875199317932,
+      "val_accuracy": 0.8409166666666666
+    }
+  ],
+  "test_accuracy": 0.8329,
+  "results_file": "reports\\deep_learning_results.csv",
+  "confusion_matrix_file": "reports\\deep_learning_confusion_matrix.csv",
+  "confusion_matrix_figure": "reports\\figures\\deep_learning_confusion_matrix.png",
+  "model_file": "models\\deep_learning_gru.pt",
+  "config": {
+    "vocab_size": 20000,
+    "embedding_dim": 128,
+    "hidden_dim": 96,
+    "num_classes": 4,
+    "dropout": 0.3,
+    "max_length": 80,
+    "max_train_samples": 20000,
+    "epochs": 3,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "seed": 42
+  }
+}

@@ -294,56 +294,58 @@ Entregáveis:
 
 ### Pessoa 3: Bruno Pereira - Modelo de Deep Learning, Demo e Resultado Final
 
+Status: concluída.
+
 Responsável por criar o modelo principal com Deep Learning e comparar o resultado final com o baseline.
 
 Atividades:
 
 - Receber os dados preparados pelo Joel Carolino (Pessoa 1).
 - Usar as métricas do Gabriel César (Pessoa 2) como referência de comparação.
-- Escolher o modelo de Deep Learning que será usado:
+- [x] Escolher o modelo de Deep Learning que será usado:
   - LSTM;
   - GRU;
   - BERT;
   - DistilBERT.
 - Caso use LSTM ou GRU:
-  - tokenizar os textos;
-  - definir o tamanho máximo das sequências;
-  - criar camada de embedding;
-  - criar camada LSTM ou GRU;
-  - adicionar camada Dense;
-  - finalizar com Softmax para quatro classes.
+  - [x] tokenizar os textos;
+  - [x] definir o tamanho máximo das sequências;
+  - [x] criar camada de embedding;
+  - [x] criar camada GRU;
+  - [x] adicionar camada Dense;
+  - [x] finalizar com saída para quatro classes.
 - Caso use BERT ou DistilBERT:
   - carregar o tokenizer do modelo;
   - tokenizar os textos no formato esperado;
   - configurar o modelo para classificação com quatro classes;
   - fazer fine-tuning usando os dados de treino.
-- Treinar o modelo de Deep Learning.
-- Avaliar o modelo nos dados de validação ou teste.
-- Calcular as mesmas métricas usadas no baseline:
+- [x] Treinar o modelo de Deep Learning.
+- [x] Avaliar o modelo nos dados de validação ou teste.
+- [x] Calcular as mesmas métricas usadas no baseline:
   - acurácia;
   - precision;
   - recall;
   - F1-score.
-- Gerar matriz de confusão do modelo de Deep Learning.
-- Comparar os resultados do Deep Learning com o baseline.
-- Verificar se o modelo de Deep Learning melhorou ou não.
-- Explicar possíveis motivos para melhora ou piora.
-- Criar uma demonstração simples com Streamlit ou Gradio:
+- [x] Gerar matriz de confusão do modelo de Deep Learning.
+- [x] Comparar os resultados do Deep Learning com o baseline.
+- [x] Verificar se o modelo de Deep Learning melhorou ou não.
+- [x] Explicar possíveis motivos para melhora ou piora.
+- [x] Criar uma demonstração simples com Streamlit:
   - campo para digitar ou colar uma notícia;
   - botão para classificar;
   - resultado com a classe prevista;
   - probabilidade ou confiança da previsão.
-- Salvar o modelo final, se possível.
+- [x] Salvar o modelo final.
 
 Entregáveis:
 
-- Notebook ou script do modelo de Deep Learning.
-- Resultado das métricas do modelo final.
-- Matriz de confusão do modelo final.
-- Comparação baseline vs Deep Learning.
-- Demo simples funcionando.
-- Explicação do modelo final para o relatório.
-- Parte da apresentação sobre Deep Learning, comparação e demo.
+- [x] Notebook ou script do modelo de Deep Learning.
+- [x] Resultado das métricas do modelo final.
+- [x] Matriz de confusão do modelo final.
+- [x] Comparação baseline vs Deep Learning.
+- [x] Demo simples funcionando.
+- [x] Explicação do modelo final para o relatório.
+- [x] Parte da apresentação sobre Deep Learning, comparação e demo.
 
 ### Responsabilidade Compartilhada
 
