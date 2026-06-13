@@ -26,24 +26,25 @@ São gerados:
 
 | Parâmetro | Valor |
 | --- | ---: |
-| Épocas | 3 |
-| Amostras de treino usadas | 20.000 |
+| Épocas | 10 |
+| Amostras de treino usadas | 40.000 |
 | Tamanho máximo da sequência | 80 tokens |
-| Tamanho do vocabulário | 20.000 |
+| Tamanho do vocabulário | 30.000 |
 | Embedding | 128 |
 | Camada GRU | 96 unidades |
+| Dispositivo | GPU CUDA |
 
 ## Resultado do GRU no teste
 
 | Classe | Precision | Recall | F1-score |
 | --- | ---: | ---: | ---: |
-| World | 0,8251 | 0,8589 | 0,8417 |
-| Sports | 0,9091 | 0,8842 | 0,8965 |
-| Business | 0,8057 | 0,7768 | 0,7910 |
-| Sci/Tech | 0,7940 | 0,8116 | 0,8027 |
-| Média | 0,8335 | 0,8329 | 0,8330 |
+| World | 0,9070 | 0,8626 | 0,8843 |
+| Sports | 0,9352 | 0,9421 | 0,9386 |
+| Business | 0,8402 | 0,8358 | 0,8380 |
+| Sci/Tech | 0,8235 | 0,8621 | 0,8424 |
+| Média | 0,8765 | 0,8757 | 0,8758 |
 
-**Acurácia do GRU no teste:** 83,29%.
+**Acurácia do GRU no teste:** 87,57%.
 
 ## Baseline de referência
 
@@ -52,15 +53,15 @@ O baseline de referência é o LinearSVC da Pessoa 2.
 | Modelo | Referência |
 | --- | ---: |
 | LinearSVC | F1 médio próximo de 0,91 a 0,92 |
-| GRU | F1 médio de 0,8330 |
+| GRU | F1 médio de 0,8758 |
 
 ## Comparação
 
-O GRU ficou abaixo do baseline LinearSVC. Isso não invalida a entrega, porque o objetivo da Pessoa 3 era criar e avaliar um modelo de Deep Learning, mas mostra que o baseline tradicional ainda foi mais forte neste dataset.
+O GRU ficou abaixo do baseline LinearSVC, mas melhorou após o treinamento com GPU, 10 épocas e mais amostras. Isso mostra que o baseline tradicional ainda foi mais forte neste dataset, mas o modelo neural conseguiu um resultado competitivo.
 
 Possíveis motivos:
 
-- o GRU foi treinado com 20.000 exemplos para manter a execução leve;
+- mesmo com 40.000 exemplos, o baseline TF-IDF com LinearSVC é muito forte para textos curtos;
 - o TF-IDF com LinearSVC é um baseline muito forte para classificação de textos curtos;
 - mais épocas, mais dados ou um modelo Transformer poderiam melhorar o resultado;
 - Business e Sci/Tech continuam sendo as classes mais difíceis de separar.
@@ -79,11 +80,11 @@ Comparar principalmente:
 
 | Classe real | World | Sports | Business | Sci/Tech |
 | --- | ---: | ---: | ---: | ---: |
-| World | 1.632 | 90 | 109 | 69 |
-| Sports | 116 | 1.680 | 34 | 70 |
-| Business | 139 | 24 | 1.476 | 261 |
-| Sci/Tech | 91 | 54 | 213 | 1.542 |
+| World | 1.639 | 73 | 96 | 92 |
+| Sports | 45 | 1.790 | 24 | 41 |
+| Business | 71 | 23 | 1.588 | 218 |
+| Sci/Tech | 52 | 28 | 182 | 1.638 |
 
 ## Observação
 
-O modelo GRU não superou o baseline TF-IDF nesta execução, principalmente por ter sido treinado com uma amostra menor para economizar tempo. Mesmo assim, ele cumpre o objetivo da Pessoa 3 por usar uma arquitetura de Deep Learning e permitir comparação direta.
+O modelo GRU não superou o baseline TF-IDF nesta execução, mas melhorou bastante com GPU, mais épocas e mais dados. Ele cumpre o objetivo da Pessoa 3 por usar uma arquitetura de Deep Learning e permitir comparação direta.

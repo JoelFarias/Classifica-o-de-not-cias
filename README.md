@@ -176,9 +176,9 @@ O modelo de Deep Learning da Pessoa 3 foi uma **GRU bidirecional** em PyTorch.
 | Modelo | Acurácia | F1 médio |
 | --- | ---: | ---: |
 | LinearSVC baseline | 91,4% | 0,91 |
-| GRU Deep Learning | 83,29% | 0,8330 |
+| GRU Deep Learning | 87,57% | 0,8758 |
 
-O GRU não superou o baseline, mas completa a etapa de Deep Learning e permite comparar os dois tipos de abordagem.
+O GRU foi treinado novamente usando GPU CUDA, com 10 épocas e 40.000 amostras de treino. Ele não superou o baseline, mas melhorou em relação à execução anterior e completa a etapa de Deep Learning.
 
 ## Dados Processados
 

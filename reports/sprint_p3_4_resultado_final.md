@@ -30,9 +30,9 @@ Registrar a entrega final da parte de Deep Learning, incluindo modelo, avaliaç�
 | Modelo | Acurácia | F1 médio |
 | --- | ---: | ---: |
 | LinearSVC baseline | cerca de 91% a 92% | cerca de 0,91 a 0,92 |
-| GRU Deep Learning | 83,29% | 0,8330 |
+| GRU Deep Learning | 87,57% | 0,8758 |
 
-O modelo de Deep Learning ficou abaixo do baseline, mas entregou uma comparação válida. Para melhorar o resultado, a próxima tentativa poderia usar o dataset completo, mais épocas ou um modelo Transformer como DistilBERT.
+O modelo de Deep Learning foi treinado com GPU CUDA, 10 épocas e 40.000 amostras de treino. Ele ficou abaixo do baseline, mas entregou uma comparação válida e melhorou em relação à execução anterior. Para melhorar o resultado, a próxima tentativa poderia usar o dataset completo ou um modelo Transformer como DistilBERT.
 
 ## Conclusão
 

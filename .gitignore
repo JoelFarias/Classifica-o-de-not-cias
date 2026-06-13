@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 venv/
 ProjetoNoticias/
+hf_space_Classificador-Noticias/
 
 # Dados e modelos grandes
 data/raw/*.zip

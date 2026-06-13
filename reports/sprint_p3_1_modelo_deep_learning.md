@@ -15,6 +15,18 @@ Essa opção foi usada porque:
 - ainda é um modelo de Deep Learning real;
 - consegue processar sequência de palavras, diferente do TF-IDF.
 
+## Configuração final
+
+| Item | Valor |
+| --- | ---: |
+| Épocas | 10 |
+| Amostras de treino | 40.000 |
+| Vocabulário | 30.000 tokens |
+| Embedding | 128 |
+| Hidden size | 96 |
+| Dropout | 0,3 |
+| Dispositivo | GPU CUDA |
+
 ## Script criado
 
 - `src/models/deep_learning_gru.py`

@@ -250,7 +250,7 @@ def save_model(model: nn.Module, vocab: dict[str, int], config: dict) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Treina um modelo GRU para classificar noticias AG News.")
-    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--max-vocab-size", type=int, default=30000)
     parser.add_argument("--max-length", type=int, default=80)
